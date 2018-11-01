@@ -7,7 +7,7 @@
       "root": "projects/ui",
       "sourceRoot": "projects/ui/src",
       "projectType": "library",
-      "prefix": "",
+      "prefix": "uky",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
