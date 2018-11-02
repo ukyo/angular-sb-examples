@@ -14,6 +14,7 @@ export class HighlightjsDirective implements OnInit {
         .replace(/&gt;/g, ">")
         .replace(/&amp;/g, "&")
     );
+    this.elementRef.nativeElement.classList.add("hljs");
     this.elementRef.nativeElement.innerHTML = value;
   }
 }

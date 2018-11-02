@@ -1,15 +1,15 @@
 import { storiesOf, moduleMetadata } from "@storybook/angular";
 import { UiModule } from "../../../projects/ui/src/lib/ui.module";
-import { BtnStoriesComponent } from "./btn-stories.component";
 import { withSources } from "../../../addons/sources";
+import { TabStoriesComponent } from "./tab-stories.component";
 
-storiesOf("Button", module)
+storiesOf("Tab", module)
   .addDecorator(withSources)
   .addDecorator(
     moduleMetadata({
       imports: [UiModule]
     })
   )
-  .add("mybtn", () => ({
-    component: BtnStoriesComponent
+  .add("tabs", () => ({
+    component: TabStoriesComponent
   }));

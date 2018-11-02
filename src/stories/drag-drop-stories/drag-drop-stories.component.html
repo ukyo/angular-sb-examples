@@ -1,0 +1,10 @@
+<div
+  cdkDropList
+  (cdkDropListDropped)="drop($event)"
+>
+  <div
+    class="example-box"
+    *ngFor="let x of list"
+    cdkDrag
+  >{{x}}</div>
+</div>

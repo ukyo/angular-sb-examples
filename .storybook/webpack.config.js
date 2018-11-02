@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   module: {
     rules: [
@@ -11,6 +13,14 @@ module.exports = {
         use: [
           {
             loader: "markdown-loader"
+          }
+        ]
+      },
+      {
+        test: /stories\/.+\/.+component\.ts$/,
+        use: [
+          {
+            loader: path.resolve(__dirname, "../loaders/source-loader.js")
           }
         ]
       },

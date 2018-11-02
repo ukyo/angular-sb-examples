@@ -15,6 +15,7 @@
     "paths": {
       "ui": ["dist/ui", "projects/ui/src"],
       "ui/*": ["dist/ui/*", "projects/ui/src/*"]
-    }
+    },
+    "jsx": "react"
   }
 }
