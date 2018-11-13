@@ -11,7 +11,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "zisui": "zisui http://localhost:6006"
+    "zisui": "zisui http://localhost:6006",
+    "reg": "reg-suit run"
   },
   "private": true,
   "dependencies": {
