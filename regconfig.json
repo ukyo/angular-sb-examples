@@ -1,0 +1,21 @@
+{
+  "core": {
+    "workingDir": ".reg",
+    "actualDir": "__screenshots__",
+    "threshold": 0,
+    "addIgnore": true,
+    "thresholdRate": 0,
+    "ximgdiff": {
+      "invocationType": "client"
+    }
+  },
+  "plugins": {
+    "reg-keygen-git-hash-plugin": true,
+    "reg-notify-github-plugin": {
+      "clientId": "MzQ1NTU2N7W01E/MSy/NSSzSLU7STa1IzC3ISS3WNzE1NDC31C/NrswHAA=="
+    },
+    "reg-publish-s3-plugin": {
+      "bucketName": "regsuit-angular-storybook-demo"
+    }
+  }
+}
