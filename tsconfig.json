@@ -10,12 +10,12 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "jsx": "react",
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "ui": ["dist/ui", "projects/ui/src"],
-      "ui/*": ["dist/ui/*", "projects/ui/src/*"]
-    },
-    "jsx": "react"
+      "my-ui": ["dist/my-ui"],
+      "my-ui/*": ["dist/my-ui/*"]
+    }
   }
 }

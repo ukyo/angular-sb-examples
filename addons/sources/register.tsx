@@ -1,7 +1,8 @@
 import * as React from "react";
 import addons from "@storybook/addons";
-import { highlight } from "highlight.js";
-import "highlight.js/styles/github-gist.css";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from "react-syntax-highlighter/dist/styles/hljs";
+
 import styled from "styled-components";
 
 import { KEY } from ".";
@@ -11,29 +12,23 @@ export interface Sources {
   component: string;
 }
 
-const SourcePanel = styled.div`
-  margin: 20px;
-`;
-
-const SourcePanelHeader = styled.header`
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-  height: 32px;
-  padding-left: 12px;
-  border-radius: 3px 3px 0 0;
-  font-size: 12px;
-  background-color: #fff;
-  color: #b9b9b9;
+const Container = styled.div`
   display: flex;
-  align-items: center;
-`;
+  width: 100%;
+  height: 100%;
 
-const SourceBody = styled.pre`
-  margin: 0px;
-  padding: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-top: none;
-  border-radius: 0 0 3px 3px;
+  > pre {
+    flex: 1;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+
+    &:last-child {
+      border: none;
+    }
+  }
 `;
 
 export class SourcesPanel extends React.Component<any, SourcesPanel> {
@@ -59,43 +54,19 @@ export class SourcesPanel extends React.Component<any, SourcesPanel> {
     });
   }
 
-  highlightCode(name: string, str: string) {
-    return {
-      __html: highlight(name, str).value
-    };
-  }
-
   render() {
     const { active } = this.props;
     // const
 
     return active ? (
-      <div>
-        <SourcePanel>
-          <SourcePanelHeader>Template</SourcePanelHeader>
-          <SourceBody>
-            <code
-              className="language-html hljs"
-              dangerouslySetInnerHTML={this.highlightCode(
-                "html",
-                this.state.template
-              )}
-            />
-          </SourceBody>
-        </SourcePanel>
-        <SourcePanel>
-          <SourcePanelHeader>Component</SourcePanelHeader>
-          <SourceBody>
-            <code
-              className="language-typescript hljs"
-              dangerouslySetInnerHTML={this.highlightCode(
-                "typescript",
-                this.state.component
-              )}
-            />
-          </SourceBody>
-        </SourcePanel>
-      </div>
+      <Container>
+        <SyntaxHighlighter style={docco}>
+          {this.state.template}
+        </SyntaxHighlighter>
+        <SyntaxHighlighter style={docco}>
+          {this.state.component}
+        </SyntaxHighlighter>
+      </Container>
     ) : null;
   }
 
