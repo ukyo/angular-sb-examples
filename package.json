@@ -9,7 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 6006",
+    "build-lib": "ng build my-ui",
     "build-storybook": "build-storybook",
+    "build-all": "run-s build-lib build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "ss": "storybook-chrome-screenshot",
     "reg": "reg-suit run"
