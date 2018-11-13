@@ -1,0 +1,4 @@
+[build]
+  publish = "storybook-static"
+  command = "yarn build-storybook"
+  YARN_VERSION = "1.9.4"

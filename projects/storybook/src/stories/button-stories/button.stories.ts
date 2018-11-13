@@ -7,7 +7,6 @@ import { withScreenshot } from "storybook-chrome-screenshot";
 
 storiesOf("Button", module)
   .addDecorator(withSources)
-  // .addDecorator(withScreenshot())
   .addDecorator(
     moduleMetadata({
       imports: [StoriesModule],

@@ -11,7 +11,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "ss": "storybook-chrome-screenshot -p 9001 -c .storybook",
+    "ss": "storybook-chrome-screenshot",
     "reg": "reg-suit run"
   },
   "private": true,
