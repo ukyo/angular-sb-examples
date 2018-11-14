@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { IconButtonComponent } from './icon-button.component';
+import { IconButtonComponent } from "./icon-button.component";
 
-describe('IconButtonComponent', () => {
+describe("IconButtonComponent", () => {
   let component: IconButtonComponent;
   let fixture: ComponentFixture<IconButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IconButtonComponent ]
-    })
-    .compileComponents();
+      declarations: [IconButtonComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('IconButtonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it("should create", () => {
+    expect(/👾/.test(fixture.nativeElement.textContent));
   });
 });

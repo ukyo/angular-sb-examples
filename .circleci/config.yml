@@ -30,5 +30,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn ss
+      - run: yarn test:my-ui:ci
+      - run: yarn build-all
+      - run: yarn ss:ci
       - run: yarn reg
