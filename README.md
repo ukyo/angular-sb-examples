@@ -1,27 +1,29 @@
-# Sbhoge
+[![CircleCI](https://circleci.com/gh/ukyo/angular-sb-examples.svg?style=svg)](https://circleci.com/gh/ukyo/angular-sb-examples)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
+# Angular Storybook Examples
 
-## Development server
+This repository is a sample project of Angular library.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development with Storybook
 
-## Code scaffolding
+Start to build library and storybook project.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+$ yarn
+$ yarn build my-ui --watch
+$ yarn storybook 
+```
 
-## Build
+Then edit and add code!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## CI
 
-## Running unit tests
+[CircleCI](https://circleci.com)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Visual Regression Testing
 
-## Running end-to-end tests
+[reg-suit](https://reg-viz.github.io/reg-suit)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Deploy
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Stories are deployed to https://angular-sb-examples.netlify.com/
