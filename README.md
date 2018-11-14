@@ -22,7 +22,7 @@ Then edit and add code!
 
 ## Visual Regression Testing
 
-[reg-suit](https://reg-viz.github.io/reg-suit)
+Visual regression testing with [reg-suit](https://reg-viz.github.io/reg-suit). Show this [PR](https://github.com/ukyo/angular-sb-examples/pull/2)
 
 ## Deploy
 
